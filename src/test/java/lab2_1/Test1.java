@@ -1,11 +1,9 @@
 package lab2_1;
 
 import static org.junit.Assert.*;
-
 import org.junit.*;
-
 import edu.iis.mto.bsearch.*;
-import org.junit.Test;
+import lab2_1.IllegalArgumentException;
 
 public class Test1 {
 
@@ -19,9 +17,10 @@ public class Test1 {
 	}
 	
 	@After
-	public void after(int seq[]){
+	public void after(int seq[]) throws IllegalArgumentException{
+		
 		if(seq.length <= 0)
-			throw IllegalArgumentException("D³ugoœæ sekwencji wejœciowej nie mo¿e byæ równy 0");
+			throw new IllegalArgumentException("D³ugoœæ sekwencji wejœciowej nie mo¿e byæ równy 0");
 	}
 	
 	@Test
